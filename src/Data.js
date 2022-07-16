@@ -8,16 +8,16 @@ export const sliderItems = [
   },
   {
     id: 2,
-    img: 'https://i.ibb.co/DG69bQ4/2.png',
-    title: 'AUTUMN COLLECTION',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    img: 'https://www.xda-developers.com/files/2019/08/phone-and-mac-1024x911.png',
+    title: 'The 100% engagement platform',
+    desc: "Find and create free gamified quizzes and interactive lessons to engage any learner.",
     bg: 'fcf1ed',
   },
   {
     id: 3,
-    img: 'https://i.ibb.co/cXFnLLV/3.png',
-    title: 'LOUNGEWEAR LOVE',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    img: 'https://i.pinimg.com/736x/2f/bf/c4/2fbfc4583357ca950eee2e5e0564a289.jpg',
+    title: 'Find and create free gamified quizzes and interactive lessons to engage any learner. ',
+    desc: "You don't want to make a boring form. And your audience won't answer one. Create a quiz with interective ui and make everyone happy.",
     bg: 'fbf0f4',
   },
 ];

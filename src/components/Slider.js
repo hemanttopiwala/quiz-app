@@ -87,6 +87,22 @@ const Button=styled.button`
      cursor:pointer;
 `;
 
+
+const Teachers=styled.div`
+    width:70%;
+    
+    display:flex;
+    flex-dirction:column;
+    justify-content:space-between;
+    align-items:center;
+`;
+
+const Description=styled.div`
+    flex:1;
+    font-size:20px;
+    font-weight:700;
+    
+`;
 const Slider = () => {
 
     const [slideidx,setSlide]=useState();
@@ -122,7 +138,18 @@ const Slider = () => {
                             <Title>{obj.title}</Title>
                             <Desc>{obj.desc}</Desc>
 
-                            <Link to="/register" style={{textDecoration:'none' }}><Button>SIGN UP</Button></Link>
+                            <Teachers>
+                                <Description>
+                                    Teachers, Students & Parents
+                                </Description>
+
+                                <Link to="/register" style={{textDecoration:'none' }}>
+
+                                    <Button>SIGN UP For Free</Button>
+                                </Link>
+                            </Teachers>
+
+                            
                             
                             
                         </InfoContainer>

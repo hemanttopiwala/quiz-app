@@ -2,37 +2,35 @@ import React from 'react';
 
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {mobile} from '../responsive';
-
-
+import { mobile } from '../responsive';
+import { Badge } from '@material-ui/core';
+import { People, ShoppingCartOutlined } from '@material-ui/icons';
 
 const Container = styled.div`
   height: 60px;
-  background-color:#c5aa6a;
-  ${mobile({ height:"50px"})};
-  
+  background-color: #c5aa6a;
+  ${mobile({ height: '50px' })};
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  align-items:center;
-  
+  align-items: center;
 
-  ${mobile({ padding:"10px 0px"})};
+  ${mobile({ padding: '10px 0px' })};
 `;
 
 const Left = styled.div`
-    flex:1;
-    display:flex;
-    align-items:center
-`
-const Language=styled.span`
-    font-size:14px;
-    cursor:pointer;
-    color:white;
-    ${mobile({ display:"none"})};
-`
+  flex: 1;
+  display: flex;
+  align-items: center;
+`;
+const Language = styled.span`
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  ${mobile({ display: 'none' })};
+`;
 
 // const SearchContainer=styled.div`
 //     border: 0.5px solid lightgray;
@@ -42,39 +40,39 @@ const Language=styled.span`
 //     padding:5px;
 // `
 
-const Input=styled.input`
-    border:none;
+const Input = styled.input`
+  border: none;
 
-    ${mobile({ width:"50px"})};
-`
+  ${mobile({ width: '50px' })};
+`;
 
 const Center = styled.div`
-    flex:1;
-    text-align:center
-`
+  flex: 1;
+  text-align: center;
+`;
 
-const Logo=styled.h1`
-    font-weight:bold;
-    color:white;
-    ${mobile({ fontSize:"24px"})};
-`
+const Logo = styled.h1`
+  font-weight: bold;
+  color: white;
+  ${mobile({ fontSize: '24px' })};
+`;
 
 const Right = styled.div`
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-    ${mobile({ flex:2, justifyContent:"center"})};
-`
-const MenuItem=styled.div`
-    font-size:14px;
-    cursor:pointer;
-    margin-left:25px;
-    color:white;
-    
-    ${mobile({ fontSize:"12px", marginLeft:"8px"})};
-`
+  ${mobile({ flex: 2, justifyContent: 'center' })};
+`;
+const MenuItem = styled.div`
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  color: white;
+
+  ${mobile({ fontSize: '12px', marginLeft: '8px' })};
+`;
 
 const Navbar = () => {
   return (
@@ -91,22 +89,24 @@ const Navbar = () => {
         </Left> */}
 
         <Left>
-            <Logo>Quizard</Logo>
+          <Logo>Quizard</Logo>
         </Left>
 
-
         <Right>
+          <Link to="/register" style={{ textDecoration: 'none' }}>
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="/login" style={{ textDecoration: 'none' }}>
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
 
-          <Link to="/register" style={{textDecoration:'none' }}><MenuItem>REGISTER</MenuItem></Link>
-          <Link to="/login" style={{textDecoration:'none' }}><MenuItem>SIGN IN</MenuItem></Link>
-
-            
-            
-            {/* <MenuItem>
-                <Badge badgeContent={4} color='primary'>
-                    <ShoppingCartOutlined />
-                </Badge>
-            </MenuItem> */}
+          <Link to="/Commnunity" style={{ textDecoration: 'none' }}>
+            <MenuItem>
+              <Badge badgeContent={4} color="primary">
+                <People />
+              </Badge>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
